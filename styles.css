@@ -1,0 +1,649 @@
+/* ============================================
+   VARIÁVEIS DE COR - PALETA JUH FURTADO
+   ============================================ */
+:root {
+    /* Cores Principais */
+    --primary-brown: #9B8B7E;      /* Terroso principal */
+    --primary-rose: #C9A89A;       /* Rosé */
+    --primary-nude: #E8DDD8;       /* Nude */
+    --primary-cream: #F5F2EF;      /* Creme claro */
+    --accent-dark: #6B5D54;        /* Marrom escuro */
+    --accent-light: #D4C4BC;       /* Bege claro */
+    
+    /* Cores Neutras */
+    --white: #FFFFFF;
+    --text-dark: #4A4A4A;
+    --text-light: #7A7A7A;
+    --border-light: #E0D5CC;
+    
+    /* Tipografia */
+    --font-primary: 'Poppins', sans-serif;
+    --font-display: 'Playfair Display', serif;
+}
+
+/* ============================================
+   RESET E ESTILOS GLOBAIS
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    background-color: var(--primary-cream);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--accent-dark) 100%);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    background: linear-gradient(to bottom, var(--primary-cream), var(--white));
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+}
+
+.hero-text h2 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--accent-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--accent-dark) 100%);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(155, 139, 126, 0.3);
+}
+
+.btn-secondary {
+    background: var(--primary-rose);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(155, 139, 126, 0.25);
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.05rem;
+}
+
+.btn-xl {
+    padding: 18px 50px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   SEÇÃO DE SERVIÇOS
+   ============================================ */
+.services {
+    background: var(--white);
+    padding: 80px 20px;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--accent-dark);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.service-block.reverse {
+    direction: rtl;
+}
+
+.service-block.reverse > * {
+    direction: ltr;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-photo {
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.facial-care {
+    background: linear-gradient(135deg, var(--primary-rose) 0%, var(--primary-brown) 100%);
+}
+
+.laser {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--primary-brown) 100%);
+}
+
+.wellness {
+    background: linear-gradient(135deg, var(--primary-nude) 0%, var(--primary-rose) 100%);
+}
+
+.service-content h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.service-list {
+    background: var(--primary-cream);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.service-price {
+    font-weight: 700;
+    color: var(--primary-brown);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   SEÇÃO DE OFERTA ESPECIAL
+   ============================================ */
+.special-offer {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--accent-dark) 100%);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.offer-content h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.offer-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offer-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.offer-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.offer-text {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.offer-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* ============================================
+   DIFERENCIAIS
+   ============================================ */
+.differentials {
+    background: var(--white);
+    padding: 80px 20px;
+}
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.differential-card {
+    text-align: center;
+    padding: 30px;
+    background: var(--primary-cream);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.differential-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(155, 139, 126, 0.15);
+}
+
+.differential-icon {
+    font-size: 2.5rem;
+    color: var(--primary-brown);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.differential-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+}
+
+.differential-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   PROVA SOCIAL
+   ============================================ */
+.social-proof {
+    background: linear-gradient(to bottom, var(--primary-cream), var(--white));
+    padding: 80px 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(155, 139, 126, 0.15);
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.before-after {
+    background: linear-gradient(135deg, var(--primary-rose) 0%, var(--primary-brown) 100%);
+}
+
+.client-photo {
+    background: linear-gradient(135deg, var(--primary-nude) 0%, var(--primary-rose) 100%);
+}
+
+.feedback {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--primary-brown) 100%);
+}
+
+.testimonial-text {
+    padding: 20px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.testimonial-card-text {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-brown);
+}
+
+.testimonial-card-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(155, 139, 126, 0.15);
+}
+
+.testimonial-card-text .testimonial-text {
+    padding: 0;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.testimonial-author {
+    color: var(--primary-brown);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============================================
+   LOCALIZAÇÃO
+   ============================================ */
+.location {
+    background: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.location-text {
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.location-address {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.final-cta {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--accent-dark) 100%);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--accent-dark);
+    color: var(--white);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.location-footer {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-block.reverse {
+        direction: ltr;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .placeholder-image {
+        height: 300px;
+    }
+
+    .btn-large,
+    .btn-xl {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    .final-cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .differentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .service-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .placeholder-image {
+        height: 250px;
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   ANIMAÇÕES E EFEITOS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-block,
+.differential-card,
+.testimonial-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Smooth scroll behavior para links internos */
+a[href^="#"] {
+    scroll-behavior: smooth;
+}
